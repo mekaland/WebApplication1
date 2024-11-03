@@ -1,0 +1,22 @@
+﻿@model List<WebApplication1.Models.Urun>
+@{
+    ViewData["Title"] = "Index";
+}
+<div>
+	<strong> @ViewBag.urunSayisi</strong> adet urun listelendi.
+</div>
+
+<h1>Index</h1>
+<ul>
+    @foreach (var urun in Model)
+    {
+        @if( urun.Satistami == true)
+        {
+            <li>
+                <h3>@urun.UrunAdi</h3>
+                <p>@urun.Aciklama</p>
+            </li>
+        }
+       
+    }
+</ul>
